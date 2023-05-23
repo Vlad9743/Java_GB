@@ -1,7 +1,6 @@
 package org.example.homework6;
 
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.Map;
 
 public class Notebook {
@@ -42,42 +41,36 @@ public class Notebook {
             String matchField = "";
             switch (entry.getKey()){
                 case 1:
-                    //matchField = mark;
                     if(!mark.equals(entry.getValue())){
                         match = false;
                     }
                     break;
                 case 2:
-                    //matchField = manufacturer;
                     if(!manufacturer.equals(entry.getValue())){
                         match = false;
                     }
                     break;
                 case 3:
-                    //matchField = cpu;
                     if(!cpu.equals(entry.getValue())){
                         match = false;
                     }
                     break;
                 case 4:
-                    //matchField = ram.toString();
                     if(ram < Integer.valueOf(entry.getValue())){
                         match = false;
                     }
                     break;
                 case 5:
-                    //matchField = hddVolume.toString();
                     if(hddVolume < Integer.valueOf(entry.getValue())){
                         match = false;
                     }
                     break;
                 case 6:
-                    matchField = color;
+                    if(!color.equals(entry.getValue())){
+                        match = false;
+                    }
                     break;
             }
-            //if(!matchField.equals(entry.getValue()))
-              //  match = false;
-
         }
         return match;
     }
